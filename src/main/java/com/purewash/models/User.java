@@ -1,15 +1,25 @@
 package com.purewash.models;
 
-import lombok.Getter;
-import lombok.Setter;
+import jakarta.persistence.*;
+import lombok.*;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
 import java.util.Collection;
+import java.util.UUID;
 
-@Getter
-@Setter
+@Entity
+@Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+@Table(name = "user")
 public class User implements UserDetails {
+    @Id
+    @GeneratedValue(strategy = GenerationType.UUID)
+    @Column(name = "id")
+    private UUID id;
+
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         return null;
