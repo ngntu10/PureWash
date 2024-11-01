@@ -32,7 +32,7 @@ public class Subcription {
     private String description;
 
     @Column(name = "price")
-    private Double price;
+    private Long price;
 
     @Column(name = "duration_time")
     private Date durationTime;

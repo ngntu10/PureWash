@@ -1,7 +1,7 @@
 package com.purewash.utils;
 
-import com.Optimart.exceptions.InvalidParamException;
-import com.Optimart.models.User;
+import com.purewash.exceptions.InvalidParamException;
+import com.purewash.models.User;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;

@@ -1,6 +1,6 @@
 package com.purewash.utils;
 
-import com.Optimart.exceptions.FileUploadException;
+import com.purewash.exceptions.FileUploadException;
 import lombok.experimental.UtilityClass;
 import org.springframework.web.multipart.MultipartFile;
 

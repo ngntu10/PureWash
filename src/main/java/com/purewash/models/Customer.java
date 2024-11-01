@@ -24,19 +24,19 @@ public class Customer {
     private UUID id;
 
     @Column(name = "customer_number")
-    private Integer customerNumber;
+    private String customerNumber;
 
     @Column(name = "name", length = 255)
     private String name;
 
     @Column(name = "phone")
-    private Integer phone;
+    private String phone;
 
     @Column(name = "password", length = 255)
     private String password;
 
     @Column(name = "account_balance", precision = 10, scale = 2)
-    private Double accountBalance;
+    private Long accountBalance;
 
     @OneToMany(mappedBy = "customer", cascade = CascadeType.ALL)
     private List<WashingMachine> washingMachines;

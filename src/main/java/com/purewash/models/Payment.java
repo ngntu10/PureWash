@@ -33,7 +33,7 @@ public class Payment {
 
     @ManyToOne
     @JoinColumn(name = "customer_id")
-    private CustomerAccountManagement customer;
+    private Customer customer;
 
     @OneToOne(mappedBy = "payment")
     private Order order;

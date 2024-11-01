@@ -15,7 +15,7 @@ import java.util.UUID;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name = "order")
+@Table(name = "orders")
 public class Order {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
@@ -35,7 +35,7 @@ public class Order {
 
     @ManyToOne
     @JoinColumn(name = "customer_id")
-    private CustomerAccountManagement customer;
+    private Customer customer;
 
     @ManyToOne
     @JoinColumn(name = "machine_id")

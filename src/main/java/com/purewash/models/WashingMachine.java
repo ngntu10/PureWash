@@ -29,6 +29,6 @@ public class WashingMachine {
 
     @ManyToOne
     @JoinColumn(name = "customer_id")
-    private CustomerAccountManagement customer;
+    private Customer customer;
 
 }

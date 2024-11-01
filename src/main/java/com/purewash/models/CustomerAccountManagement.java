@@ -22,12 +22,12 @@ public class CustomerAccountManagement {
         private UUID id;
 
         @Column(name = "top_up_amount")
-        private Double topUpAmount;
+        private Long topUpAmount;
 
         @Column(name = "payment_method")
         private String paymentMethod;
 
         @ManyToOne
         @JoinColumn(name = "customer_id")
-        private CustomerAccountManagement customer;
+        private Customer customer;
 }

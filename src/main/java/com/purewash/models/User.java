@@ -13,12 +13,15 @@ import java.util.UUID;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name = "user")
+@Table(name = "users")
 public class User implements UserDetails {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     @Column(name = "id")
     private UUID id;
+
+    @Column(name = "email", nullable = false)
+    private String email;
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
