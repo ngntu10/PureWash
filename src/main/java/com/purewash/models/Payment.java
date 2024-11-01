@@ -22,8 +22,9 @@ public class Payment {
     @Column(name = "id")
     private UUID id;
 
-    @Column(name = "amount")
-    private Double amount;
+    @Column(name = "amount")  //VND
+    private Long amount;
+
     @Temporal(TemporalType.TIMESTAMP)
     private Date paymentDatetime;
 
@@ -35,5 +36,5 @@ public class Payment {
     private CustomerAccountManagement customer;
 
     @OneToOne(mappedBy = "payment")
-    private UsageStrategy usageStrategy;
+    private Order order;
 }

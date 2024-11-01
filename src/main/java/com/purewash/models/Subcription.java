@@ -1,6 +1,7 @@
 package com.purewash.models;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -8,6 +9,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.UUID;
 
@@ -26,13 +28,17 @@ public class Subcription {
     @Column(name = "subscription_name")
     private String subscriptionName;
 
+    @Column(name = "description")
+    private String description;
+
     @Column(name = "price")
     private Double price;
 
     @Column(name = "duration_time")
-    private Integer durationTime;
+    private Date durationTime;
 
+    @JsonIgnore
     @OneToMany(mappedBy = "subscription", cascade = CascadeType.ALL)
-    private List<UsageStrategy> usageStrategies;
+    private List<Order> orderList;
 
 }

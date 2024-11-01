@@ -25,5 +25,4 @@ public class TransactionHistory {
     @ManyToOne
     @JoinColumn(name = "customer_id")
     private CustomerAccountManagement customer;
-
 }

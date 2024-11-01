@@ -15,8 +15,8 @@ import java.util.UUID;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name = "usage_strategy")
-public class UsageStrategy {
+@Table(name = "order")
+public class Order {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     @Column(name = "id")
@@ -39,7 +39,7 @@ public class UsageStrategy {
 
     @ManyToOne
     @JoinColumn(name = "machine_id")
-    private washingMachine washingMachine;
+    private WashingMachine washingMachine;
 
     @ManyToOne
     @JoinColumn(name = "subscription_id")
